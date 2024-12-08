@@ -1,0 +1,12 @@
+langchain-core
+langchain-community
+langchain-groq
+langchain-pinecone
+langchain-huggingface
+langgraph
+streamlit
+python-dotenv
+pinecone-client
+tavily-python
+typing-extensions
+typing-inspect
