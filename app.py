@@ -18,10 +18,11 @@ from typing_extensions import TypedDict
 load_dotenv()
 
 # Configuración de Pinecone
-pinecone_api_key = os.getenv("PINECONE_API_KEY")
-tavily_api_key = os.getenv("TAVILY_API_KEY")
-langsmith_api_key = os.getenv("LANGSMITH_API_KEY")
-groq_api_key = os.getenv("GROQ_API_KEY")
+
+pinecone_api_key = st.secrets["PINECONE_API_KEY"]
+tavily_api_key = st.secrets["TAVILY_API_KEY"]
+langsmith_api_key = st.secrets["LANGSMITH_API_KEY"]
+groq_api_key = st.secrets["GROQ_API_KEY"]
 
 pc = Pinecone(api_key=pinecone_api_key)
 
