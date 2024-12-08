@@ -88,7 +88,7 @@ from langchain.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
 # Configuración del modelo y plantilla de prompts
-llm = ChatGroq(temperature=0, model_name="llama-3.2-3b-preview")
+llm = ChatGroq(temperature=0, model_name="llama-3.2-3b-preview", api_key=groq_api_key)
 
 system_template = """
 You are a grader assessing the relevance of a retrieved document to a user question.
@@ -206,7 +206,7 @@ def web_search(state):
 
 
 # Configuración de `chain_rag`
-llm= ChatGroq(temperature=0, model_name="llama-3.2-3b-preview")
+llm = ChatGroq(temperature=0, model_name="llama-3.2-3b-preview", api_key=groq_api_key)
 
 rag_template = """
 You are an assistant for question-answering tasks.
