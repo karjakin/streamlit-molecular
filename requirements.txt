@@ -10,3 +10,4 @@ pinecone-client
 tavily-python
 typing-extensions
 typing-inspect
+einops
