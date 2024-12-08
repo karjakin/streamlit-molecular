@@ -19,11 +19,11 @@ load_dotenv()
 
 # Configuración de Pinecone
 
-pinecone_api_key = st.secrets["PINECONE_API_KEY"]
-tavily_api_key = st.secrets["TAVILY_API_KEY"]
-langsmith_api_key = st.secrets["LANGSMITH_API_KEY"]
-groq_api_key = st.secrets["GROQ_API_KEY"]
 
+pinecone_api_key = st.secrets.api_keys.pinecone
+tavily_api_key = st.secrets.api_keys.tavily
+langsmith_api_key = st.secrets.api_keys.langsmith
+groq_api_key = st.secrets.api_keys.groq
 pc = Pinecone(api_key=pinecone_api_key)
 
 index_name = "langchain-test-index"  # Nombre del índice
