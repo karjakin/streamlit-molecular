@@ -17,13 +17,11 @@ from typing_extensions import TypedDict
 
 load_dotenv()
 
-# Configuración de Pinecone
+tavily_api_key = st.secrets["api_keys"]["tavily"]
+langsmith_api_key = st.secrets["api_keys"]["langsmith"]
+pinecone_api_key = st.secrets["api_keys"]["pinecone"]
+groq_api_key = st.secrets["api_keys"]["groq"]
 
-
-pinecone_api_key = st.secrets.api_keys.pinecone
-tavily_api_key = st.secrets.api_keys.tavily
-langsmith_api_key = st.secrets.api_keys.langsmith
-groq_api_key = st.secrets.api_keys.groq
 pc = Pinecone(api_key=pinecone_api_key)
 
 index_name = "langchain-test-index"  # Nombre del índice
@@ -206,7 +204,7 @@ def web_search(state):
 
 
 # Configuración de `chain_rag`
-llm = ChatGroq(temperature=0, model_name="llama-3.2-3b-preview", api_key=groq_api_key)
+llm= ChatGroq(temperature=0, model_name="llama-3.2-3b-preview", api_key=groq_api_key)
 
 rag_template = """
 You are an assistant for question-answering tasks.
@@ -332,3 +330,4 @@ if prompt:
          st.error(f"⚠️ Error al generar la respuesta: {e}")
 
 st.markdown("---")
+
