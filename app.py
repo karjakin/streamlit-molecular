@@ -27,11 +27,7 @@ st.write("Langsmith API Key:", langsmith_api_key)
 st.write("Pinecone API Key:", pinecone_api_key)
 st.write("Groq API Key:", groq_api_key)
 
-import os
-os.environ["tavily_api_key"] == tavily_api_key
-os.environ["langsmith_api_key"] == langsmith_api_key
-os.environ["pinecone_api_key"] == pinecone_api_key
-os.environ["groq_api_key"] == groq_api_key
+export TAVILY_API_KEY="your-api-key"
 
 pc = Pinecone(api_key=pinecone_api_key)
 
