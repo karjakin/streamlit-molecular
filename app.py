@@ -22,11 +22,6 @@ langsmith_api_key = st.secrets["api_keys"]["langsmith"]
 pinecone_api_key = st.secrets["api_keys"]["pinecone"]
 groq_api_key = st.secrets["api_keys"]["groq"]
 
-st.write("Tavily API Key:", tavily_api_key)
-st.write("Langsmith API Key:", langsmith_api_key)
-st.write("Pinecone API Key:", pinecone_api_key)
-st.write("Groq API Key:", groq_api_key)
-
 import os 
 os.environ['TAVILY_API_KEY'] = tavily_api_key 
 
